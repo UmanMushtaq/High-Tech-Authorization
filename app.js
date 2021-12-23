@@ -7,7 +7,7 @@ const AuthRoutes = require('./routes/auth');
 const feedRoutes = require('./routes/feed');
 const http = require('http').createServer(app);
 require('express-async-errors');
-const PORT = process.env.PORT || 3000; 
+const PORT = (process.env.PORT || 3000); 
 const Comments = require('./models/Comments');
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
