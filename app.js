@@ -23,7 +23,7 @@ app.use(feedRoutes);
 mongoose
   .connect(process.env.MONGODB_URI)
   .then((result) => {
-    http.listen(PORT, 'localhost');
+    http.listen(PORT);
     const io = require('socket.io')(http);
     io.on('connection', function (socket) {
       socket.on('comment', function (data) {
